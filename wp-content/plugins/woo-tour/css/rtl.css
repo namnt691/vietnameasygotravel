@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* Css for rtl language */
+.exwt-single-tour #wtmain-content .exwt-info-ct2{ margin-right: auto; margin-left: 0 }
+.wt-departure i { left: 0; right: auto; direction: ltr; }
+.exwt-single-tour #wtmain-content .exwt-layout-2 .exwt-heading .exwt-hd-ct2{ padding-left: 0; padding-right: 30px }
+.exwt-single-tour #wtmain-content .exwt-info-ct1 > .images{ direction: ltr; }
+.exwt-single-tour #wtmain-content  form{ text-align: right; }
+.woo-tour-accompanied .tour-service span i:after{ left: 0; right: auto}
+.wootour-social-share li{ float: right;margin-right:0; margin-left: 20px }
+.exwt-single-tour #wtmain-content .exwt-related-event figure.ex-modern-blog figcaption{ text-align: right; }
+.exwt-single-tour #wtmain-content .exwt-layout-3 .exwt-info .exwt-info-ct2{ margin-right: 0; margin-left: auto }
+.wt-grid-shortcode .item-post-n { float: right; }
+.wt-table .tb-meta,
+.wt-grid-shortcode figure.ex-modern-blog .wt-more-meta > span{ margin-right: 0; margin-left: 8px; display: inline-block; }
+.wt-grid-shortcode figure.ex-modern-blog .wt-more-meta span i{ margin-right: 0; margin-left: 5px; }
+.woo-tour-schedu .ev-schedu p:before{ right: 5px ;left: auto }
+.woo-tour-schedu .ev-schedu p:after{ right: 1px; left: auto; }
+.wt-grid-shortcode.gr-classic figure.ex-modern-blog .wt-location-arr{ right: 15px; left: auto; }
+.wt-location-arr i{ margin-left: 7px; margin-right: 0; }
+.wt-grid-shortcode.wt-grid-column-1 .item-post-n .grid-content,
+.wt-grid-shortcode.wt-grid-column-1 .item-post-n .image{ float: right; }
+.wt-grid-shortcode.wt-grid-column-1 figure.ex-modern-blog figcaption{ padding-right: 30px; padding-left: 0; }
+.wt-grid-shortcode.wt-grid-column-1 figure.ex-modern-blog .ex-social-share,
+.wt-table-lisst .wt-table td, .wt-dropdown-select,
+.wt-grid-shortcode figure.ex-modern-blog{ text-align: right; }
+.exwt-btn.we-button,
+.wt-ext-info .woo-tour-accompanied .exwt-col8 { float: right; }
+.ex-loadmore .loadmore-grid span:not(.load-text):nth-child(2){ margin-right: 10px; margin-left:0; }
+.exl-carousel{ direction: ltr; }
+.wt-more-meta { direction: rtl; }
+.wt-grid-shortcode figure.ex-modern-blog .image .wt-location-arr { direction: rtl; left: auto; right: 0; }
+.exwt-btn.we-button{ box-shadow: none; }
+.wt-table .tb-meta i { margin-right: 0; margin-left: 5px; }
+.alert-warning.tour-mes-info i{ margin-right: 0; margin-left: 10px }

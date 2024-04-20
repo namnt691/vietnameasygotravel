@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* Css layout */
+.exwt-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.clearfix:before,
+.clearfix:after,
+.exwt-container:before,
+.exwt-container:after,
+.exwt-row:before,
+.exwt-row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.exwt-container:after,
+.exwt-row:after{clear: both;}
+.exwt-col9, .exwt-col3,.exwt-col4,.exwt-col6, .exwt-col12,.exwt-col8,.exwt-col-sm6{position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
+@media (min-width: 768px) {
+  .exwt-container {max-width: 750px;}
+  .exwt-col-sm6 {width: 50%;}
+  .exwt-col-sm6{float: left;}
+}
+@media (min-width: 992px) {
+    .exwt-container {max-width: 970px;}
+    .exwt-col9, .exwt-col3,.exwt-col4,.exwt-col6, .exwt-col12,.exwt-col8{ float: left; }
+    .exwt-col3 { width: 25%; }
+    .exwt-col4 { width: 33.33333333%; }
+    .exwt-col6 { width: 50%; }
+    .exwt-col8 { width: 66.66666667%; }
+    .exwt-col9 {width: 75%;}    
+    .exwt-col12 {width: 100%;}
+}
+@media (min-width: 1200px) {
+  .exwt-container {max-width: 1170px;}
+}
+.exwt-row {margin-left: -15px;margin-right: -15px;}
+.exwt-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 0;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.exwt-btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.exwt-btn:hover,
+.exwt-btn:focus{
+  color: #333333;
+  text-decoration: none;
+}
+.exwt-btn:active,
+.exwt-btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.exwt-btn-default {color: #333333;background-color: #ffffff;border-color: #cccccc;}
+.exwt-input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.exwt-input-group-btn { width: 1%;white-space: nowrap;vertical-align: middle; display: table-cell;}
+.alert-warning.tour-mes-info {background-color: #fcf8e3; border-color: #faebcc; color: #8a6d3b;padding: 15px;border-radius: 1px;}

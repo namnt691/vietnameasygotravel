@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+#wootours select, #wootours input[type=text]{ min-width:250px; height:35px}
+#wootours label{ margin-right:15px; display: block; margin-top:10px}
+.mce-ico.mce-i-ex_timeline_bt,
+.icon-grid{ background-image:url(../image/listing.png) !important; background-repeat: initial !important; background-size:100%}
+/*-Settings-*/
+#wootours .subsubsub{font-size:17px; width:100%}
+#wootours .subsubsub li:last-child span{ display:none;}
+#wootours form .section-heading{ display:none !important}
+#wootours form .form-table{ border: 1px solid #E8E8E8; padding: 10px 30px;border-collapse: unset;background-color:#FFFFFF;}
+#wootours form .form-table label[for="grid_share_button_em"]{ display:block; margin-bottom:15px;}
+#wootours form .form-table .color-picker{ display:inline-block}
+#wootours select, #wootours input[type=text] {
+    min-width: 250px;
+    height: 35px;
+	margin-right: 15px;
+}
+#wootours .subsubsub{ display:block; border-bottom: 1px solid #ccc;}
+#wootours form .form-table textarea{ width:100%;}
+.pac-container.pac-logo:after{ background-image:none !important; display:none;}
+
+#wootours .static-text + table tbody tr{ width:33.333333333%; float:left;}
+
+.exc_mb_metabox .exc_mb-row{ display:inline-block; width:100%;}
+.exc_mb-row input[type=number]{ max-width:99%}
+.edit_form_line input.cat.textfield[name=cat]{display: inline-block !important;}
+.postbox-container #discount.hide-adf #wt_disc_number{ display:none;}
+body .exc_mb_metabox .field{ border-bottom: 0; }
+body .exc_mb_metabox .exc_mb-row{ border-bottom: 1px solid #DFDFDF }
+body .exc_mb_metabox .exc_mb-row:last-child{border-bottom: 0;}
+body button + .exc_mb_metabox_description,
+body .field-item + .exc_mb_metabox_description{ margin-top: 10px !important; margin-bottom: 0 !important }
+
+#wootours .form-table span.wp-picker-input-wrap.hidden {display: block !important;}
+#wootours .form-table .wp-picker-container .wp-picker-clear,
+#wootours .form-table .wp-picker-container button.button.wp-color-result { display:none}
+#wootours .subsubsub li {
+    float: left;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-left: .5em;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    background: #e5e5e5;
+    color: #555;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#wootours .subsubsub li a{ color: inherit; }
+#wootours .subsubsub li a:focus{ box-shadow: none; }
+#wootours .subsubsub li.active{
+	border-bottom: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    color: #000;
+    margin-bottom: -1px;
+}
+.wt-add-passenger-info > p.form-row {width: 30%;display: inline-block;margin: 0;margin-right: 3%;}
+.wt-add-passenger-info {border: 1px solid #ccc;padding: 10px 15px;margin-bottom: 15px;}
+.wt-add-passenger-info p.pa-lab {font-weight: bold;}
+.wt-add-passenger-infos{ display: none; }
+
+.ex-hidden-form{ display: none }
+.ex-hidden-form.ex-active {position: fixed;z-index: 1000;left: 0;top: 0;width: 100%;height: 100%;}
+.exwt-forchange-attendee{background-color: #fefefe;margin: auto;padding: 20px 30px;width: 75%;background: #fff;margin-top: 20vh;}
+.wt-add-passenger-info .exwt-save-att{}
+.ex-loading{ opacity: .5 }
+.wt-add-passenger-info > p.form-row select { display: block; }
+
+.form-row.exwt-disday {display: inline-block;margin: 0 30px 0 0;}
+.form-row.exwt-disday label {margin-left: 5px;}
+.form-row.exef-disday-tit{ margin-bottom: 0; }
+
+.exwt-hide-disday .exwt-disday,
+.exwt-hide-disday .exef-disday-tit{display: none !important;}
+#wootours #wt_main_purpose option:nth-child(2) { display: none; }
+#wootours label.cb-inline { display: inline-block; margin-bottom: 10px; }
