@@ -1892,7 +1892,7 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
     .productBoxCusbox .heading.titleoverview {
         background: url(images/overview.svg) left 3px no-repeat;
         padding-left: 33px;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
         color: #0160d1 !important;
         background-size: contain;
@@ -2017,7 +2017,7 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
 .titlehightlight {
     background: url(images/inclusions.png) left 4px no-repeat;
     padding-left: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #0160d1;
     background-size: contain;
@@ -2027,7 +2027,7 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
 .titleItinerary {
     background: url(images/summary.svg) left no-repeat;
     padding-left: 25px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #0160d1;
 }
@@ -2035,7 +2035,7 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
 .titleInclusions {
     background: url(images/inclusions.png) left no-repeat;
     padding-left: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #0160d1;
     background-size: contain;
@@ -2106,7 +2106,7 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
 .titleExclusions {
     background: url(images/exclusions.png) left no-repeat;
     padding-left: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #0160d1;
     background-size: contain;
@@ -2134,6 +2134,16 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
 
 .descriptionBox ul {
     margin-bottom: 10px;
+}
+
+.titlePolicy {
+    background: url(images/policy.png) left no-repeat;
+    padding-left: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0160d1;
+    background-size: contain;
+    background-size: 29px;
 }
 
 .RealteTour {

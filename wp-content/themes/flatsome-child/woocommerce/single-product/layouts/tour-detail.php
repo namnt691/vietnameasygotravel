@@ -401,11 +401,11 @@ $current_language = $sitepress->get_current_language();
                         </div>
                     </div>
                     <div class="productBoxCusbox noTopRadius" id="navInclusions">
-                        <div class="row">
-                            <div class="col  medium-6 small-12 large-6">
-                                <div class="heading titleInclusions">
-                                    
-                                    <?php
+                        <ul id="boxaccIs" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
+                            <li class="inclusions">
+                                <a class="uk-accordion-title inclusionsTitle" href="#0">
+                                    <span class="titleIs heading titleInclusions">
+                                        <?php
                                         if ($current_language == 'vi') {
                                             echo "Giá tour bao gồm";
                                         } elseif ($current_language == 'en') {
@@ -413,29 +413,114 @@ $current_language = $sitepress->get_current_language();
                                         }
 
                                         ?>
+                                    </span>
+                                </a>
+                                <div class="inclusionsContent" hidden="" aria-hidden="true">
+                                    <div class="descriptionBox descInclusions">
+                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Inclusions', true); ?>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <script>
+                                jQuery("#boxaccIs li.inclusions a.uk-accordion-title.inclusionsTitle").click(function() {
+                                    jQuery(".inclusionsContent").toggle();
+                                });
+                            </script>
+                    </div>
+
+                    <div class="productBoxCusbox noTopRadius" id="navExclusions">
+                        <ul id="boxaccEx" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
+                            <li class="exclusions">
+                                <a class="uk-accordion-title exclusionsTitle" href="#0">
+                                    <span class="titleIs heading titleExclusions">
+                                        <?php
+                                            if ($current_language == 'vi') {
+                                                echo "Giá tour không bao gồm";
+                                            } elseif ($current_language == 'en') {
+                                                echo "Exclusions";
+                                            }
+                                        ?>
+                                    </span>
+                                </a>
+                                <div class="exclusionsContent" hidden="" aria-hidden="true">
+                                    <div class="descriptionBox descExclusions">
+                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Exclusions', true); ?>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <script>
+                                jQuery("#boxaccEx li.exclusions a.uk-accordion-title.exclusionsTitle").click(function() {
+                                    jQuery(".exclusionsContent").toggle();
+                                });
+                            </script>
+                    </div>
+
+                    <div class="productBoxCusbox noTopRadius" id="navPolicy">
+                        <ul id="boxaccPl" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
+                            <li class="policy">
+                                <a class="uk-accordion-title policyTitle" href="#0">
+                                    <span class="titleIs heading titlePolicy">
+                                        <?php
+                                            if ($current_language == 'vi') {
+                                                echo "Chính sách";
+                                            } elseif ($current_language == 'en') {
+                                                echo "Policy";
+                                            }
+                                        ?>
+                                    </span>
+                                </a>
+                                <div class="policyContent" hidden="" aria-hidden="true">
+                                    <div class="descriptionBox descPolicy">
+                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Exclusions', true); ?>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <script>
+                                jQuery("#boxaccPl li.policy a.uk-accordion-title.policyTitle").click(function() {
+                                    jQuery(".policyContent").toggle();
+                                });
+                            </script>
+                    </div>
+                    <!-- form cũ -->
+                    <!-- <div class="productBoxCusbox noTopRadius" id="navInclusions">
+                        <div class="row">
+                            <div class="col  medium-6 small-12 large-6">
+                                <div class="heading titleInclusions">
+                                    
+                                    <?php
+                                        // if ($current_language == 'vi') {
+                                        //     echo "Giá tour bao gồm";
+                                        // } elseif ($current_language == 'en') {
+                                        //     echo "Inclusions";
+                                        // }
+
+                                        ?>
                                 </div>
                                 <div class="descriptionBox descInclusions">
-                                    <?php echo get_post_meta(get_the_ID(), 'Tour_Inclusions', true); ?>
+                                    <?php //echo get_post_meta(get_the_ID(), 'Tour_Inclusions', true); ?>
                                 </div>
                             </div>
                             <div class="col  medium-6 small-12 large-6">
                                 <div class="heading titleExclusions">
                                     
                                     <?php
-                                        if ($current_language == 'vi') {
-                                            echo "Giá tour không bao gồm";
-                                        } elseif ($current_language == 'en') {
-                                            echo "Exclusions";
-                                        }
+                                        // if ($current_language == 'vi') {
+                                        //     echo "Giá tour không bao gồm";
+                                        // } elseif ($current_language == 'en') {
+                                        //     echo "Exclusions";
+                                        // }
 
                                         ?>
                                 </div>
                                 <div class="descriptionBox descExclusions">
-                                    <?php echo get_post_meta(get_the_ID(), 'Tour_Exclusions', true); ?>
+                                    <?php //echo get_post_meta(get_the_ID(), 'Tour_Exclusions', true); ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="productBoxCusbox noTopRadius" id="navPolicy">
                         <div class="heading titlePolicy">
 
