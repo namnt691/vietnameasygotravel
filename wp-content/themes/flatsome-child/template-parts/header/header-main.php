@@ -20,7 +20,7 @@
       <ul class="header-nav header-nav-main nav nav-left <?php flatsome_nav_classes('main'); ?>">
         <?php flatsome_header_elements('header_elements_left'); ?>
         <?php
-        do_action('wpml_add_language_selector');
+        //do_action('wpml_add_language_selector');
         ?>
         <?php echo do_shortcode('[block id="dang-ky-tu-van"]') ?>
       </ul>
@@ -38,7 +38,7 @@
       <ul class="mobile-nav nav nav-right <?php flatsome_nav_classes('main-mobile'); ?>">
         <?php flatsome_header_elements('header_mobile_elements_right', 'mobile'); ?>
         <?php
-        do_action('wpml_add_language_selector');
+        //do_action('wpml_add_language_selector');
         ?>
       </ul>
     </div>

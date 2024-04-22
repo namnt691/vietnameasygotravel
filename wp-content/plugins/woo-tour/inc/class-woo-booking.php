@@ -990,7 +990,7 @@ class WooTour_Booking {
 
 				$wt_adult_label = $wt_adult_label!='' ? $wt_adult_label.': ' : esc_html__($adu,'woo-tour');
 				$wt_adult_label = '<span class="lb-pric">'.$wt_adult_label.'</span>';
-				echo '<span class="_adult_select">' . $wt_adult_label.' <span class="p-price">'.$product->get_price_html().'</span>';
+				echo '<span class="_adult_select">Passenger: <span class="p-price">'.$product->get_price_html().'</span>';
 					echo exwt_quantity_html('wt_number_adult', $sl_value,$wt_adult_min,$wt_adult_min,$l);
 				echo '</span>';
 				// child field

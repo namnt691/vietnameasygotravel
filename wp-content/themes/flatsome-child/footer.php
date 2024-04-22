@@ -191,6 +191,30 @@ if ($current_language == 'en') {
             }
         }
     })
+
+    jQuery('.tour-detail').owlCarousel({
+        loop: true,
+        margin: 30,
+        dots: false,
+        nav: false,
+        autoplay: 1000,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+
+            },
+            600: {
+                items: 1,
+
+            },
+            1000: {
+                items: 1,
+
+
+            }
+        }
+    })
     jQuery(".reviews-owl").owlCarousel({
         nav: true,
         margin: 30,

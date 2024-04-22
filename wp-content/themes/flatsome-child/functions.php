@@ -670,8 +670,8 @@ function GetProHot($code, $arg)
                                 </a>
                             </div>
                             <div class="homeProContent">
-                                <div class="homeProTitle">
-                                    <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
+                                <div class="homeProTitle" style = "height: 102px;vertical-align: middle;display: table-cell;">
+                                    <a style="display: block; word-wrap: normal;" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
                                         <?php echo get_the_title(); ?>
                                     </a>
                                 </div>
@@ -696,19 +696,19 @@ function GetProHot($code, $arg)
                                                     echo "Khởi hành - Điểm đến:";
                                                 }
                                                 if ($current_language == 'en') {
-                                                    echo "Departure - Destination:";
+                                                    echo "Departure:";
                                                 }
                                                 ?>
                                             </strong><?php echo get_post_meta(get_the_ID(), 'Pro_F2', true); ?></div>
-                                        <div class="prox--custoe prox-hotel"><strong>
+                                        <!-- <div class="prox--custoe prox-hotel"><strong>
                                                 <?php
-                                                if ($current_language == 'vi') {
-                                                    echo "Thời gian khởi hành:";
-                                                }
-                                                if ($current_language == 'en') {
-                                                    echo "Departure time:";
-                                                }
-                                                ?> </strong><?php echo get_post_meta(get_the_ID(), 'Pro_F3', true); ?></div>
+                                                // if ($current_language == 'vi') {
+                                                //     echo "Thời gian khởi hành:";
+                                                // }
+                                                // if ($current_language == 'en') {
+                                                //     echo "Departure time:";
+                                                // }
+                                                ?> </strong><?php //echo get_post_meta(get_the_ID(), 'Pro_F3', true); ?></div> -->
                                         <div class="prox--custoe prox-tourin"><strong>
                                                 <?php
                                                 if ($current_language == 'vi') {
@@ -718,14 +718,24 @@ function GetProHot($code, $arg)
                                                     echo "Form:";
                                                 }
                                                 ?> </strong><?php echo get_post_meta(get_the_ID(), 'Pro_F4', true); ?></div>
-                                        <div class="prox--custoe prox-confi"><strong><?php
-                                                                                        if ($current_language == 'vi') {
-                                                                                            echo "Khách sạn:";
-                                                                                        }
-                                                                                        if ($current_language == 'en') {
-                                                                                            echo "Hotel:";
-                                                                                        }
-                                                                                        ?> </strong><?php echo get_post_meta(get_the_ID(), 'Pro_F5', true); ?></div>
+                                        
+                                        <div class="prox--custoe prox-timego"><strong>
+													<?php
+													if ($current_language == 'vi') {
+														echo "Điểm đến:";
+													}
+													if ($current_language == 'en') {
+														echo "Destination:";
+													}
+													?> </strong><?php echo get_post_meta(get_the_ID(), 'Cruises_Destination', true); ?></div>
+                                        <!-- <div class="prox--custoe prox-confi"><strong><?php
+                                                // if ($current_language == 'vi') {
+                                                //     echo "Khách sạn:";
+                                                // }
+                                                // if ($current_language == 'en') {
+                                                //     echo "Hotel:";
+                                                // }
+                                                ?> </strong><?php //echo get_post_meta(get_the_ID(), 'Pro_F5', true); ?></div> -->
                                     </div>
                                 </div>
                                 <div class="homeProPrice">
@@ -803,6 +813,7 @@ function my_head_css()
     echo "<link rel='stylesheet'  href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css' type='text/css' media='all' />";
     echo "<script  src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' ></script>";
     echo "<script  src='" . get_stylesheet_directory_uri() . "/js/bootstrap.min.js' ></script>";
+    // echo "<script  src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' ></script>";
 }
 
 

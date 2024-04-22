@@ -16,7 +16,41 @@ $current_language = $sitepress->get_current_language();
             <h1 class="tieude-detail ">
                 <?php echo get_the_title($idPro); ?>
             </h1>
-            <div class="tr-gallery-box">
+            <div class='container'>
+                <div class=' tour-detail  owl-carousel'>
+                    <?php
+                    $attachment_ids = $product->get_gallery_attachment_ids();
+                    foreach ($attachment_ids as $attachment_id) {
+                    ?>
+                        <?php
+                            if ( wp_is_mobile() ) {
+                                ?>
+                                <div class="item" style="display: flex; justify-content: center; align-items: center;">
+                                    <div class="gallery_item" >
+                                        <img style="width: auto; height: 244.6px;"   class="gallery_img" src="<?php echo wp_get_attachment_url($attachment_id, 'large'); ?>" alt="">
+                                    </div>
+                                </div>
+                                <?php
+                            } 
+                        ?>
+                        <?php
+                            if ( !wp_is_mobile() ) {
+                                ?>
+                                <div class="item">
+                                    <div class="gallery_item" >
+                                        <img style="width: 1170px; height: 780px"  class="gallery_img" src="<?php echo wp_get_attachment_url($attachment_id, 'large'); ?>" alt="">
+                                    </div>
+                                </div>
+                                <?php
+                            } 
+                        ?>
+
+                    <?php
+                        }
+                    ?>
+                </div>
+            </div>
+            <!-- <div class="tr-gallery-box">
                 <div class="gallery_list">
                     <div class="gallery_item item_first">
                         <img class="gallery_img" id="zoom_01" src="<?php echo get_the_post_thumbnail_url($idPro, 'large') ?>">
@@ -39,7 +73,7 @@ $current_language = $sitepress->get_current_language();
                     }
                     ?>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -52,6 +86,24 @@ $current_language = $sitepress->get_current_language();
         <div class="col medium-8 small-12 large-8">
 
             <div class="row">
+                <?php
+                    if ( wp_is_mobile() ) {
+                        ?>
+                        <div class="col medium-4 small-12 large-4">
+                            <div class="bookingnow-boxx">
+                                <div class="exwt-booking-form">
+
+                                    <?php
+                                    woocommerce_template_single_add_to_cart();
+                                    // do_action('exwt_after_atc_form')
+                                    ?>
+                                </div>
+                            </div>
+
+                        </div>
+                        <?php
+                    } 
+                ?>
                 <div class="col medium-12 small-12 large-12">
                     <div class="tabBox">
                         <div class="navProTab">
@@ -395,18 +447,24 @@ $current_language = $sitepress->get_current_language();
                 </div>
             </div>
         </div>
-        <div class="col medium-4 small-12 large-4">
-            <div class="bookingnow-boxx">
-                <div class="exwt-booking-form">
+        <?php
+            if ( !wp_is_mobile() ) {
+                ?>
+                <div class="col medium-4 small-12 large-4">
+                    <div class="bookingnow-boxx">
+                        <div class="exwt-booking-form">
 
-                    <?php
-                    woocommerce_template_single_add_to_cart();
-                    // do_action('exwt_after_atc_form')
-                    ?>
+                            <?php
+                            woocommerce_template_single_add_to_cart();
+                            // do_action('exwt_after_atc_form')
+                            ?>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-
-        </div>
+                <?php
+            } 
+        ?>
 
     </div>
     <div class="row RealteTour-row">
