@@ -651,8 +651,12 @@ function GetProHot($code, $arg)
                     global $sitepress;
                     $current_language = $sitepress->get_current_language();
 
-                    $price = get_post_meta(get_the_ID(), '_regular_price', true);
-                    $saleprice = get_post_meta(get_the_ID(), '_sale_price', true);
+                    $product_id = get_the_ID(); // Lấy ID của sản phẩm hiện tại
+                    $product = wc_get_product($product_id); // Lấy đối tượng sản phẩm từ ID
+                    $totalPriceCus = $product->get_price();
+
+                    // $price = get_post_meta(get_the_ID(), '_regular_price', true);
+                    // $saleprice = get_post_meta(get_the_ID(), '_sale_price', true);
                     ?>
                     <?php
                     $field = get_field_object('Pro_F1');
@@ -740,7 +744,7 @@ function GetProHot($code, $arg)
                                 </div>
                                 <div class="homeProPrice">
                                     <div class="ProPriceGr">
-                                        <?php echo GetPrice($saleprice, $price); ?>
+                                        <?php echo GetPriceTotalCus($totalPriceCus); ?>
                                     </div>
                                 </div>
                             </div>
@@ -785,6 +789,14 @@ function GetPrice($newprice, $oldprice)
 
     return $str;
 }
+
+function GetPriceTotalCus($totalPriceCus)
+{
+    $str = "";
+    $str .= "<div class='new'><strong>Giá: </strong>" . wc_price($totalPriceCus) . "</div>";
+    return $str;
+}
+
 
 function GetSale($newprice, $oldprice)
 {

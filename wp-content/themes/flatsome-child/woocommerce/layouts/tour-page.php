@@ -110,8 +110,11 @@ $CategoryPage = get_queried_object();
 
 					<div class="col  medium-4 small-12 large-4 ">
 						<?php
-						$price = get_post_meta(get_the_ID(), '_regular_price', true);
-						$saleprice = get_post_meta(get_the_ID(), '_sale_price', true);
+						$product_id = get_the_ID(); // Lấy ID của sản phẩm hiện tại
+						$product = wc_get_product($product_id); // Lấy đối tượng sản phẩm từ ID
+						$totalPriceCus = $product->get_price();
+						// $price = get_post_meta(get_the_ID(), '_regular_price', true);
+						// $saleprice = get_post_meta(get_the_ID(), '_sale_price', true);
 						?>
 						<?php
 						$field = get_field_object('Pro_F1');
@@ -202,7 +205,7 @@ $CategoryPage = get_queried_object();
 									</div>
 									<div class="homeProPrice">
 										<div class="ProPriceGr">
-											<?php echo GetPrice($saleprice, $price); ?>
+											<?php echo GetPriceTotalCus($totalPriceCus); ?>
 										</div>
 									</div>
 								</div>
