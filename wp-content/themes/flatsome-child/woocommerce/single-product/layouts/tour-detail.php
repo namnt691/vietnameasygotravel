@@ -273,16 +273,16 @@ $current_language = $sitepress->get_current_language();
                                                 }
                                                 ?> </strong><?php echo get_post_meta(get_the_ID(), 'Pro_F4', true); ?>
                                         </div>
-                                        <div class="prox--custoe prox-confi"><strong>
+                                        <!-- <div class="prox--custoe prox-confi"><strong>
                                                 <?php
-                                                if ($current_language == 'vi') {
-                                                    echo "Khách sạn:";
-                                                }
-                                                if ($current_language == 'en') {
-                                                    echo "Hotel:";
-                                                }
-                                                ?> </strong><?php echo get_post_meta(get_the_ID(), 'Pro_F5', true); ?>
-                                        </div>
+                                                // if ($current_language == 'vi') {
+                                                //     echo "Khách sạn:";
+                                                // }
+                                                // if ($current_language == 'en') {
+                                                //     echo "Hotel:";
+                                                // }
+                                                ?> </strong><?php //echo get_post_meta(get_the_ID(), 'Pro_F5', true); ?>
+                                        </div> -->
                                     </div>
                                     <?php
 
@@ -360,9 +360,9 @@ $current_language = $sitepress->get_current_language();
 
                                             <li class="<?php echo $i; ?> ">
                                                 <a class="uk-accordion-title daytitlekmdate" href="#<?php echo $i; ?>">
-                                                    <span class="title14 days"><?php
-                                                                                echo    $name;
-                                                                                ?>,</span>
+                                                    <span class="title14 days">
+                                                        <?php echo $name; ?>,
+                                                    </span>
                                                     <span class="title15 visitdays"></span><span class="uk-float-right daytxt"></span>
                                                 </a>
                                                 <div class="uk-accordion-content class-<?php echo $i; ?>" hidden="" aria-hidden="true">
@@ -473,7 +473,7 @@ $current_language = $sitepress->get_current_language();
                                 </a>
                                 <div class="policyContent" hidden="" aria-hidden="true">
                                     <div class="descriptionBox descPolicy">
-                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Exclusions', true); ?>
+                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Policy', true); ?>
                                     </div>
                                 </div>
                             </li>
@@ -484,6 +484,15 @@ $current_language = $sitepress->get_current_language();
                                 });
                             </script>
                     </div>
+                
+                    <!-- <div class="productBoxCusbox noTopRadius" id="navPolicy">
+                        <div class="heading titlePolicy">
+
+                        </div>
+                        <div class="descriptionBox">
+                        <?php //echo get_post_meta(get_the_ID(), 'Tour_Policy', true); ?>
+                        </div>
+                    </div> -->
                     <!-- form cũ -->
                     <!-- <div class="productBoxCusbox noTopRadius" id="navInclusions">
                         <div class="row">
@@ -521,14 +530,6 @@ $current_language = $sitepress->get_current_language();
                             </div>
                         </div>
                     </div> -->
-                    <div class="productBoxCusbox noTopRadius" id="navPolicy">
-                        <div class="heading titlePolicy">
-
-                        </div>
-                        <div class="descriptionBox">
-                            <?php echo get_post_meta(get_the_ID(), 'Tour_Policy', true); ?>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
