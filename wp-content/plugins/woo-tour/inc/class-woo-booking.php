@@ -993,10 +993,14 @@ class WooTour_Booking {
 				echo '<span class="_adult_select">Passenger: <span class="p-price">'.$product->get_price_html().'</span>';
 					echo exwt_quantity_html('wt_number_adult', $sl_value,$wt_adult_min,$wt_adult_min,$l);
 				echo '</span>';
-				// child field
-				wt_passenger_field_html('wt_child','wt_child_max','wt_child_label','wt_def_childf','wt_default_child','wt_child_sale','wt_number_child','_child_select','','wt_child_min');
-				// infant field
-				wt_passenger_field_html('wt_infant','wt_infant_max','wt_infant_label','wt_def_intff','wt_default_inf','wt_infant_sale','wt_number_infant','_infant_select','','wt_infant_min');
+				global $product;	
+				$type = $product->get_type();
+				if( !$product->get_type() == 'simple' ){
+					// child field
+					wt_passenger_field_html('wt_child','wt_child_max','wt_child_label','wt_def_childf','wt_default_child','wt_child_sale','wt_number_child','_child_select','','wt_child_min');
+					// infant field
+					wt_passenger_field_html('wt_infant','wt_infant_max','wt_infant_label','wt_def_intff','wt_default_inf','wt_infant_sale','wt_number_infant','_infant_select','','wt_infant_min');
+				}
 				if(get_option('wt_ctfieldprice') == 1){
 					// custom field 1
 					$label1 = explode("|",get_option('wt_ctfield1_info'));
