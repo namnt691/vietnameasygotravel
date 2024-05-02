@@ -2031,7 +2031,13 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
     font-weight: bold;
     color: #0160d1;
 }
-
+.hightlightTitlenav {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0160d1;
+    background-size: contain;
+    background-size: 29px;
+}
 .titleInclusions {
     background: url(images/inclusions.png) left no-repeat;
     padding-left: 35px;
@@ -2134,6 +2140,17 @@ h1, h2, h3, h4, h5, h6, .heading-font, .off-canvas-center .nav-sidebar.nav-verti
 
 .descriptionBox ul {
     margin-bottom: 10px;
+    margin: 0px;
+}
+
+.titleHightlightnav {
+    background: url(images/inclusions.png) left no-repeat;
+    padding-left: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0160d1;
+    background-size: contain;
+    background-size: 29px;
 }
 
 .titlePolicy {

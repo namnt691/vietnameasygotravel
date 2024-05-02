@@ -312,35 +312,20 @@ $current_language = $sitepress->get_current_language();
                         </div>
 
                     </div>
-                    <div class="productBoxCusbox noTopRadius" id="navHightlight">
-                        <div class="heading titlehightlight">
-                            
-                            <?php
-                                        if ($current_language == 'vi') {
-                                            echo "Điểm nổi bật";
-                                        } elseif ($current_language == 'en') {
-                                            echo "Hightlight";
-                                        }
-
-                                        ?>
-                        </div>
-                        <div class="descriptionBox">
-                            <?php echo get_post_meta(get_the_ID(), 'Tour_Hightlight', true); ?>
-                        </div>
-                    </div>
 
                     <div class="productBoxCusbox noTopRadius" id="navItinerary">
                         <div class="heading titleItinerary">
                             
                             <?php
-                                        if ($current_language == 'vi') {
-                                            echo "Chương trình tour";
-                                        } elseif ($current_language == 'en') {
-                                            echo "Itinerary";
-                                        }
+                                if ($current_language == 'vi') {
+                                    echo "Chương trình tour";
+                                } elseif ($current_language == 'en') {
+                                    echo "Itinerary";
+                                }
 
-                                        ?>
+                            ?>
                         </div>
+
                         <div class="descriptionBox">
                             <div class="boxitinerary">
                                 <ul id="boxacc" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="">
@@ -372,6 +357,7 @@ $current_language = $sitepress->get_current_language();
                                                 </div>
                                             </li>
                                             <script>
+                                                jQuery(".class-<?php echo $i; ?>").css("display", "block");
                                                 jQuery("#boxacc li.<?php echo $i; ?> a.uk-accordion-title").click(function() {
                                                     jQuery(".class-<?php echo $i; ?>").toggle();
                                                 });
@@ -388,7 +374,6 @@ $current_language = $sitepress->get_current_language();
                                             $i++;
                                         endwhile;
 
-
                                         ?>
 
                                     <?php
@@ -400,6 +385,52 @@ $current_language = $sitepress->get_current_language();
 
                         </div>
                     </div>
+
+                    <!-- <div class="productBoxCusbox noTopRadius" id="navHightlight">
+                        <div class="heading titlehightlight">
+                            
+                            <?php
+                                // if ($current_language == 'vi') {
+                                //     echo "Điểm nổi bật";
+                                // } elseif ($current_language == 'en') {
+                                //     echo "Hightlight";
+                                // }
+                            ?>
+                        </div>
+                        <div class="descriptionBox">
+                            <?php //echo get_post_meta(get_the_ID(), 'Tour_Hightlight', true); ?>
+                        </div>
+                    </div> -->
+
+                    <div class="productBoxCusbox noTopRadius" id="navHightlight">
+                        <ul id="boxaccHl" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
+                            <li class="hightlight">
+                                <a class="uk-accordion-title titleHightlightnav" href="#0">
+                                    <span class="titleIs heading hightlightTitlenav">
+                                        <?php
+                                            if ($current_language == 'vi') {
+                                                echo "Điểm nổi bật";
+                                            } elseif ($current_language == 'en') {
+                                                echo "Hightlight";
+                                            }
+
+                                        ?>
+                                    </span>
+                                </a>
+                                <div class="hightlightContent" hidden="" aria-hidden="true">
+                                    <div class="descriptionBox descHightlight descriptionBox">
+                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Hightlight', true); ?>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <script>
+                                jQuery("#boxaccHl li.hightlight a.uk-accordion-title.titleHightlightnav").click(function() {
+                                    jQuery(".hightlightContent").toggle();
+                                });
+                            </script>
+                    </div>
+                    
                     <div class="productBoxCusbox noTopRadius" id="navInclusions">
                         <ul id="boxaccIs" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
                             <li class="inclusions">
