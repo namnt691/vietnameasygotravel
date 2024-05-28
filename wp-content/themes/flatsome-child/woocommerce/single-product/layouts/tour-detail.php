@@ -313,6 +313,35 @@ $current_language = $sitepress->get_current_language();
 
                     </div>
 
+                    <div class="productBoxCusbox noTopRadius" id="navHightlight">
+                        <ul id="boxaccHl" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
+                            <li class="hightlight">
+                                <a class="uk-accordion-title titleHightlightnav" href="#0">
+                                    <span class="titleIs heading hightlightTitlenav">
+                                        <?php
+                                            if ($current_language == 'vi') {
+                                                echo "Điểm nổi bật";
+                                            } elseif ($current_language == 'en') {
+                                                echo "Hightlight";
+                                            }
+
+                                        ?>
+                                    </span>
+                                </a>
+                                <div class="hightlightContent" hidden="" aria-hidden="true">
+                                    <div class="descriptionBox descHightlight descriptionBox">
+                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Hightlight', true); ?>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <script>
+                                jQuery("#boxaccHl li.hightlight a.uk-accordion-title.titleHightlightnav").click(function() {
+                                    jQuery(".hightlightContent").toggle();
+                                });
+                            </script>
+                    </div>
+
                     <div class="productBoxCusbox noTopRadius" id="navItinerary">
                         <div class="heading titleItinerary">
                             
@@ -402,34 +431,7 @@ $current_language = $sitepress->get_current_language();
                         </div>
                     </div> -->
 
-                    <div class="productBoxCusbox noTopRadius" id="navHightlight">
-                        <ul id="boxaccHl" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">
-                            <li class="hightlight">
-                                <a class="uk-accordion-title titleHightlightnav" href="#0">
-                                    <span class="titleIs heading hightlightTitlenav">
-                                        <?php
-                                            if ($current_language == 'vi') {
-                                                echo "Điểm nổi bật";
-                                            } elseif ($current_language == 'en') {
-                                                echo "Hightlight";
-                                            }
-
-                                        ?>
-                                    </span>
-                                </a>
-                                <div class="hightlightContent" hidden="" aria-hidden="true">
-                                    <div class="descriptionBox descHightlight descriptionBox">
-                                        <?php echo get_post_meta(get_the_ID(), 'Tour_Hightlight', true); ?>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                            <script>
-                                jQuery("#boxaccHl li.hightlight a.uk-accordion-title.titleHightlightnav").click(function() {
-                                    jQuery(".hightlightContent").toggle();
-                                });
-                            </script>
-                    </div>
+                    
                     
                     <div class="productBoxCusbox noTopRadius" id="navInclusions">
                         <ul id="boxaccIs" data-id="0" class="boxaccordion uk-accordion contentindex" uk-accordion="" style="list-style: none;">

@@ -1045,7 +1045,7 @@ body.framed, body.framed header, body.framed .header-wrapper, body.boxed, body.b
     }
 
 .slider-wrapper + .row:not(.row-collapse), .banner-grid-wrapper + .row:not(.row-collapse), .banner + .row:not(.row-collapse), .section + .row:not(.row-collapse) {
-    margin-top: 30px
+    margin-top: 70px
 }
 
 .row-full-width {

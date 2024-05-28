@@ -826,6 +826,17 @@ function my_head_css()
     echo "<script  src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' ></script>";
     echo "<script  src='" . get_stylesheet_directory_uri() . "/js/bootstrap.min.js' ></script>";
     // echo "<script  src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' ></script>";
+
+    /* thue xe  */
+    //css
+    // echo "<link rel='stylesheet' href='/wp-content/themes/flatsome-child/css/jquery.fancybox.css'>";
+    // echo "<link rel='stylesheet' href='/wp-content/themes/flatsome-child/css/thuexe.css' type='text/css' media='all' />";
+    // echo "<link href='/wp-content/themes/flatsome-child/css/jquery-ui-git.css' rel='stylesheet' type='text/css' />";
+    // //js
+    // echo "<script type='text/javascript' src='/wp-content/themes/flatsome-child/js/jquery.fancybox.min.js'></script>";
+    // echo "<script type='text/javascript' src='/wp-content/themes/flatsome-child/js/jquery-ui-git.js'></script>";
+    // echo "<script type='text/javascript' src='/wp-content/themes/flatsome-child/js/custom.js'></script>";
+    /* end thue xe */
 }
 
 
@@ -1442,220 +1453,159 @@ function shapeSpace_display_search_form()
 {
     ob_start();
 ?>
-    <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url(home_url('/')); ?>">
-        <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url(home_url('/')); ?>">
-            <div id="st-content-wrapper" class="search-result-page search-result-page--custom">
-                <div class="container">
-                    <div class="row">
-                        <div class="wpb_column column_container col medium-12">
-                            <div class="vc_column-inner wpb_wrapper">
-                                <div class="search-form-wrapper auto-height-form-search normal mix st-search-form-st_tours st-search-form-st_rental">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li role="st_tours" class="active"><a href="#st_tours" aria-controls="st_tours" role="tab" data-toggle="tab">Tours</a></li>
-                                        <li role="st_rental" class="hidden"><a href="#st_rental" aria-controls="st_rental" role="tab" data-toggle="tab">Cruises</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="st_tours">
-                                            <div class="row">
-                                                <div class="col large-12 tour-search-form-home">
-                                                    <div class="search-form">
-                                                        <div class="form">
-                                                            <div class="row rd-flex">
-                                                                <div class="col medium-4 border-right">
-                                                                    <div class="form-group form-extra-field dropdown clearfix field-detination has-icon">
-                                                                        <i class="input-icon st-border-radius field-icon fa fa-date">
-                                                                            <svg width="40px" height="40px" viewBox="0 0 17 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                                <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                                                                                <defs></defs>
-                                                                                <g id="Hotel-layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                                                                    <g id="Search_Result_1_Grid" transform="translate(-165.000000, -328.000000)" stroke="#A0A9B2">
-                                                                                        <g id="form_search_hotel_row" transform="translate(135.000000, 290.000000)">
-                                                                                            <g id="input" transform="translate(30.000000, 0.000000)">
-                                                                                                <g id="where" transform="translate(0.000000, 26.000000)">
-                                                                                                    <g id="Group" transform="translate(0.000000, 12.000000)">
-                                                                                                        <g id="ico_maps_search_box">
-                                                                                                            <path d="M15.75,8.25 C15.75,12.471 12.817,14.899 10.619,17.25 C9.303,18.658 8.25,23.25 8.25,23.25 C8.25,23.25 7.2,18.661 5.887,17.257 C3.687,14.907 0.75,12.475 0.75,8.25 C0.75,4.10786438 4.10786438,0.75 8.25,0.75 C12.3921356,0.75 15.75,4.10786438 15.75,8.25 Z" id="Shape"></path>
-                                                                                                            <circle id="Oval" cx="8.25" cy="8.25" r="3"></circle>
-                                                                                                        </g>
-                                                                                                    </g>
-                                                                                                </g>
-                                                                                            </g>
-                                                                                        </g>
-                                                                                    </g>
-                                                                                </g>
-                                                                            </svg>
-                                                                        </i>
-                                                                        <div class="dropdown" data-toggle="dropdown" id="dropdown-destination" aria-expanded="false">
-                                                                            <label>
-                                                                                <?php
+    <form role="search" method="get" class="searchform search_bus" id="search_post_type" action="<?php echo esc_url(home_url('/danh-muc-san-pham/bus-ticket')); ?>">
+        <div id="st-content-wrapper" class="search-result-page search-result-page--custom">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col medium-12">
+                        <div class="vc_column-inner wpb_wrapper">
+                            <div class="search-form-wrapper auto-height-form-search normal mix st-search-form-st_tours st-search-form-st_rental">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="st_tours" class="active"><a href="#st_tours" aria-controls="st_tours" role="tab" data-toggle="tab">Tours</a></li>
+                                    <li role="st_rental" class="hidden"><a href="#st_rental" aria-controls="st_rental" role="tab" data-toggle="tab">Cruises</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="st_tours">
+                                        <div class="search-form__content" style=" width: 1200px; max-width: 100%; height: 84px">
+                                            <div class="search-form__content__form">
+                                                <div class="frm-flight-from search-form__content__form__des box_click">
+                                                    <i class="icon-clock"></i>
+                                                    <div class="text">
+                                                    
+                                                        <?php 
+                                                            global $sitepress;
+                                                            $current_language = $sitepress->get_current_language();
+                                                        ?>
+                                                        <?php if($current_language =='vi'){?>
+                                                            <div class="labels">Điểm khởi hành</div>
+                                                        <?php } ?>
+                                                        <?php if($current_language =='en') { ?>
+                                                            <div class="labels">Departure</div>
+                                                        <?php } ?>
+                                                        <select id="cars" name="joblistdiemdi" form="search_post_type" style="-webkit-appearance: none;">
+                                                                
+                                                            <?php 
+                                                                global $sitepress;
+                                                                $current_language = $sitepress->get_current_language();
+                                                            ?>
+                                                            <?php if($current_language =='vi') { ?>
+                                                            <option value="">Chọn điểm đi</option>
+                                                            <?php } ?>
+                                                            <?php if($current_language =='en') { ?>
+                                                                <option value="">Select departure</option>
+                                                            <?php } ?>
+                                                            <?php
+                                                                $args = array(
+                                                                'post_type' => 'location',
+                                                                'post_status' => 'publish',
+                                                                
+                                                                'posts_per_page' => 100,
+                                                                'orderby' => 'post_date',
+                                                                'order' => 'asc'
+                                                                
+                                                                );
+                                                                $loop = new WP_Query($args);
+                                                                $total = $loop->found_posts;
+                                                                $iteration = 0;
+                                                                $i = 0;
+                                                                $diadiemdi = isset($_GET['joblistdiemdi']) && $_GET['joblistdiemdi'] ? $_GET['joblistdiemdi'] : "";
+                                                            ?>
+                                                            <?php
+                                                                while ($loop->have_posts()) : $loop->the_post();
+                                                                    $iteration++; {
+                                                                ?>
 
-                                                                                global $sitepress;
-                                                                                $current_language = $sitepress->get_current_language();
-                                                                                if ($current_language == 'vi') {
-                                                                                    echo "Điểm đến";
-                                                                                }
+                                                            <option value="<?php echo get_the_ID();?>" ><?php echo get_the_title(); ?></option>
+                                                            <?php
+                                                            } endwhile;
+                                                                wp_reset_query();
+                                                            ?>
+                                                        </select>
+                                                            
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="search-form__content__form__price box_click">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="text">
+                                                        
+                                                        <?php 
+                                                            global $sitepress;
+                                                            $current_language = $sitepress->get_current_language();
+                                                        ?>
+                                                        <?php if($current_language =='vi') { ?>
+                                                        <div class="labels">Điểm đến</div>
+                                                        <?php } ?>
+                                                        <?php if($current_language =='en'){ ?>
+                                                            <div class="labels">Destination</div>
+                                                        <?php } ?>
+                                                        <select id="cars1" name="joblistdiemden" form="search_post_type" style="-webkit-appearance: none;">
+                                                        <?php 
+                                                            global $sitepress;
+                                                            $current_language = $sitepress->get_current_language();
+                                                        ?>
+                                                        <?php if($current_language =='vi'){ ?>
+                                                            <option value="">Chọn điểm Đến</option>
+                                                        <?php } ?>
+                                                        <?php if($current_language =='en') { ?>
+                                                            <option value="">Select Destination</option>
+                                                        <?php } ?>
 
-                                                                                if ($current_language == 'en') {
-                                                                                    echo "Destination";
-                                                                                }
+                                                        <?php
+                                                            $args = array(
+                                                            'post_type' => 'location',
+                                                            'post_status' => 'publish',
+                                                            
+                                                            'posts_per_page' => 100,
+                                                            'orderby' => 'post_date',
+                                                            'order' => 'asc'
+                                                            
+                                                            );
+                                                            $loop = new WP_Query($args);
+                                                            $total = $loop->found_posts;
+                                                            $iteration = 0;
+                                                            $i = 0;
+                                                            $diadiemden = isset($_GET['joblistdiemden']) && $_GET['joblistdiemden'] ? $_GET['joblistdiemden'] : "";
+                                                        ?>
 
-                                                                                ?>
-
-
-                                                                            </label>
-                                                                            <div class="render">
-                                                                                <input type="text" touchend="stKeyupsmartSearch(this)" autocomplete="off" onkeyup="stKeyupsmartSearch(this)" id="st_location_name_tour" name="location_name" value="" placeholder=" <?php
-
-                                                                                                                                                                                                                                                                    global $sitepress;
-                                                                                                                                                                                                                                                                    $current_language = $sitepress->get_current_language();
-                                                                                                                                                                                                                                                                    if ($current_language == 'vi') {
-                                                                                                                                                                                                                                                                        echo "Bạn muốn đi đâu?";
-                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                    if ($current_language == 'en') {
-                                                                                                                                                                                                                                                                        echo "Where are you going?";
-                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                    ?>">
-                                                                            </div>
-                                                                            <input type="hidden" id="location_id" name="location_id" value="">
-                                                                        </div>
-                                                                        <ul class="dropdown-menu" aria-labelledby="dropdown-destination">
-                                                                            <?php
-
-                                                                            $args = array(
-                                                                                'number'     => '999',
-                                                                                'orderby'    => 'name',
-                                                                                'hide_empty' => true,
-                                                                                'meta_key' => 'cate_pr',
-                                                                                'meta_value' => 'Tour'
-                                                                            );
-                                                                            $product_categories = get_terms('product_cat', $args);
-                                                                            $selected_category  = isset($_REQUEST['product_cat']) ? $_REQUEST['product_cat'] : '';
-                                                                            foreach ($product_categories as $value) {
-
-                                                                            ?>
-                                                                                <li class="item" data-value="<?php echo  $value->term_id ?>">
-                                                                                    <i class="input-icon st-border-radius field-icon fa">
-                                                                                        <svg width="25px" height="25px" viewBox="0 0 17 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                                                                                            <defs></defs>
-                                                                                            <g id="Hotel-layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                                                                                <g id="Search_Result_1_Grid" transform="translate(-165.000000, -328.000000)" stroke="#A0A9B2">
-                                                                                                    <g id="form_search_hotel_row" transform="translate(135.000000, 290.000000)">
-                                                                                                        <g id="input" transform="translate(30.000000, 0.000000)">
-                                                                                                            <g id="where" transform="translate(0.000000, 26.000000)">
-                                                                                                                <g id="Group" transform="translate(0.000000, 12.000000)">
-                                                                                                                    <g id="ico_maps_search_box">
-                                                                                                                        <path d="M15.75,8.25 C15.75,12.471 12.817,14.899 10.619,17.25 C9.303,18.658 8.25,23.25 8.25,23.25 C8.25,23.25 7.2,18.661 5.887,17.257 C3.687,14.907 0.75,12.475 0.75,8.25 C0.75,4.10786438 4.10786438,0.75 8.25,0.75 C12.3921356,0.75 15.75,4.10786438 15.75,8.25 Z" id="Shape"></path>
-                                                                                                                        <circle id="Oval" cx="8.25" cy="8.25" r="3"></circle>
-                                                                                                                    </g>
-                                                                                                                </g>
-                                                                                                            </g>
-                                                                                                        </g>
-                                                                                                    </g>
-                                                                                                </g>
-                                                                                            </g>
-                                                                                        </svg>
-                                                                                    </i>
-                                                                                    <span><?php echo $value->name ?></span>
-                                                                                </li>
-                                                                            <?php
-
-
-                                                                            }
-
-                                                                            ?>
-
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col medium-4 border-right">
-                                                                    <div class="form-group form-date-field  field-durations  clearfix  has-icon" data-format="DD/MM/YYYY">
-                                                                        <i class="input-icon st-border-radius field-icon fa">
-                                                                            <svg height="40px" width="40px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                                <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                                                                                <defs></defs>
-                                                                                <g id="Hotel-layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                                                                    <g id="Search_Result_1_Grid" transform="translate(-436.000000, -328.000000)" stroke="#A0A9B2">
-                                                                                        <g id="form_search_hotel_row" transform="translate(135.000000, 290.000000)">
-                                                                                            <g id="input" transform="translate(30.000000, 0.000000)">
-                                                                                                <g id="check-in" transform="translate(270.000000, 26.000000)">
-                                                                                                    <g id="ico_calendar_search_box" transform="translate(1.000000, 12.000000)">
-                                                                                                        <g id="calendar-add-1">
-                                                                                                            <path d="M9.5,18.5 L1.5,18.5 C0.94771525,18.5 0.5,18.0522847 0.5,17.5 L0.5,3.5 C0.5,2.94771525 0.94771525,2.5 1.5,2.5 L19.5,2.5 C20.0522847,2.5 20.5,2.94771525 20.5,3.5 L20.5,10" id="Shape"></path>
-                                                                                                            <path d="M5.5,0.501 L5.5,5.501" id="Shape"></path>
-                                                                                                            <path d="M15.5,0.501 L15.5,5.501" id="Shape"></path>
-                                                                                                            <path d="M0.5,7.501 L20.5,7.501" id="Shape"></path>
-                                                                                                            <circle id="Oval" cx="17.5" cy="17.501" r="6"></circle>
-                                                                                                            <path d="M17.5,14.501 L17.5,20.501" id="Shape"></path>
-                                                                                                            <path d="M20.5,17.501 L14.5,17.501" id="Shape"></path>
-                                                                                                        </g>
-                                                                                                    </g>
-                                                                                                </g>
-                                                                                            </g>
-                                                                                        </g>
-                                                                                    </g>
-                                                                                </g>
-                                                                            </svg>
-                                                                        </i>
-                                                                        <div class="date-wrapper clearfix" data-toggle="dropdown" id="dropdown-durations">
-                                                                            <div class="check-in-wrapper">
-                                                                                <label>
-                                                                                    <?php
-
-                                                                                    global $sitepress;
-                                                                                    $current_language = $sitepress->get_current_language();
-                                                                                    if ($current_language == 'vi') {
-                                                                                        echo "Thời gian";
-                                                                                    }
-
-                                                                                    if ($current_language == 'en') {
-                                                                                        echo "From - To";
-                                                                                    }
-
-                                                                                    ?>
-                                                                                </label>
-                                                                                <div class="render durations">dd/mm/yyyy</div>
-                                                                                <input type="hidden" id="data_taxonomy" class="data_taxonomy" name="time" value="">
-                                                                            </div>
-                                                                        </div>
-                                                                        <ul class="dropdown-menu" aria-labelledby="dropdown-durations">
-                                                                            <?php
-                                                                            $field_key = "Pro_F1";
-                                                                            $field = acf_get_field($field_key);
-                                                                            ?>
-
-                                                                            <?php
-                                                                            foreach ($field['choices']  as $value => $label) {
-                                                                            ?>
-
-                                                                                <li class="item" data-value="<?php echo $value; ?>">
-                                                                                    <span><?php echo $label; ?></span>
-                                                                                </li>
-                                                                            <?php
-                                                                            }
-                                                                            ?>
-
-                                                                            <?php
-
-                                                                            ?>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col medium-4 no-pad-left">
-                                                                    <div class="form-button">
-                                                                        <input type="hidden" name="post_type" value="product" />
-                                                                        <button value="<?php echo esc_attr_x('Search', 'submit button', 'woocommerce'); ?>" class="btn btn-primary button btn-search">Search</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        <?php
+                                                            while ($loop->have_posts()) : $loop->the_post();
+                                                                $iteration++;
+                                                                $css="";
+                                                                if($diadiemden==$diadiemdi)
+                                                                    $css='hidden';
+                                                                {
+                                                            ?>
+                                                            
+                                                        <option type="<?php echo $css ?>" value="<?php echo get_the_ID();?>" ><?php echo get_the_title(); ?></option>
+                                                            <?php
+                                                                }
+                                                            endwhile;
+                                                            wp_reset_query();
+                                                            ?> 
+                                                            </select>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="search-form__content__form__date">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                    <div class="text">
+                                                    <?php 
+                                                        global $sitepress;
+                                                        $current_language = $sitepress->get_current_language();
+                                                    ?>
+                                                    <?php if($current_language =='vi') { ?>
+                                                    <div class="labels">Thời gian</div>
+                                                        <?php } ?>
+                                                        <?php if($current_language =='en') 
+                                                        { ?>
+                                                        <div class="labels">Departure Date</div>
+                                                        <?php } ?>
+                                                        <input type="text" id="datepicker1" name="departure_date" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>
+                                            <button type="submit" class="btn btn-orange btn-block btn-orange--mod" id="search_button"><i class="icon-search"></i>Search now</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1664,12 +1614,13 @@ function shapeSpace_display_search_form()
                     </div>
                 </div>
             </div>
-
-
-        </form>
-
-
     </form>
+    <script type="text/javascript" src="/wp-content/themes/flatsome-child/js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/flatsome-child/js/jquery-ui-git.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/flatsome-child/js/custom.js"></script>
+    <link rel='stylesheet' href='/wp-content/themes/flatsome-child/css/jquery.fancybox.css'>
+    <link rel='stylesheet' href='/wp-content/themes/flatsome-child/css/thuexe.css' type='text/css' media='all' />
+    <link href='/wp-content/themes/flatsome-child/css/jquery-ui-git.css' rel='stylesheet' type='text/css' />
 <?php
     return ob_get_clean();
 }
@@ -1792,7 +1743,7 @@ function custom_breadcrumbsgg($custoxomaxy)
                 // $post_type_link = '<a href='.get_category_link($term->term_id).'>'.$term->name.'</a>';
             } else {
 
-                $post_type_link   = sprintf($link, $archive_link, $post_type_object->labels->singular_name);
+                $post_type_link   = 'sprintf($link, $archive_link, $post_type_object->labels->singular_name)';
             }
         }
 
